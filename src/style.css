@@ -1,0 +1,93 @@
+#orderList{
+  /* display: grid;
+  grid-template-columns: 25% 25% 25% 25% ;
+  row-gap: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#bar{
+  display: grid;
+  grid-template-columns: 10% 15% 30% 35% ;
+  row-gap: 20px;  
+}
+
+#back {
+    background-image:url("./images/back.jpeg");
+}
+
+#white{
+    color:white;
+    font-size:18px;
+}
+
+.card {
+    cursor: pointer;
+    background-color: transparent;
+    height: 350px;
+    width: 250px;
+    perspective: 1000px;
+  }
+  
+  .card h1 {
+    font-size: 25px;
+    border-bottom: 1px #fff solid;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .card img {
+    width: 100%;
+    /* width: 500px; */
+    height: 350px;
+    object-fit: cover;
+    position: relative;
+    border: 2px solid #29332900;
+  }
+  .card-text{
+      position: absolute;
+      bottom: 3px;
+      width: 100%;
+      color: white;
+      text-align: center;
+      font-family: var(--font);
+      font-size: 1.5rem;
+      background-color: #173911a8;
+      border-radius: 4px;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* the card flipper */
+  .card:hover .card-inner { 
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .card-back {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transform: rotateY(180deg);
+    outline: 4px solid #4aa54a;
+  
+  }
+  
+  .card li {
+    list-style: none;
+    padding-bottom: 10px;
+  }
