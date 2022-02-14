@@ -27,21 +27,34 @@ function Main(props) {
         const displayByStatus = conditions.status ? character.status === conditions.status : true
         return displayBySeason && displayByStatus
     }
-
     
 
     function setSeason(season){
-        setConditions((current)=> ({
-            ...current, 
-            season : parseInt(season)
-        }))
+        if(parseInt(season) === conditions.season){
+            setConditions((current)=> ({
+                status : current.status
+            }))
+        }
+        else{
+            setConditions((current)=> ({
+                ...current, 
+                season : parseInt(season)
+            }))
+        }
     }
 
     function setStatus(status){
-        setConditions((current)=> ({
-            ...current, 
-            status : status
-        }))
+        if(status === conditions.status){
+            setConditions((current)=> ({
+                season : current.season
+            }))
+        }
+        else{
+            setConditions((current)=> ({
+                ...current, 
+                status : status
+            }))
+        }
     }
 
     let list = display.map((character , index) => {
@@ -53,11 +66,6 @@ function Main(props) {
         <div id="back">
             {/* search bar */}
             <div id="bar">
-
-                <div>
-                <br/>
-                <button type="button" class="btn btn-primary" onClick={() => {setConditions({})}}>Reset</button>
-                </div>
 
                 <div></div>
         
