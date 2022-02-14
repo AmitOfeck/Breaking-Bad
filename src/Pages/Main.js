@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Utils from '../Utils/Utils';
 import Character from './Character';
 import '../style.css';
+import Actor from './Actor';
 
 
 function Main(props) {
@@ -18,7 +19,7 @@ function Main(props) {
 
     useEffect(() => {
         setDisplay(()=> {
-            return characters.filter((character) => shouldDisplayCharacter(character))
+            return characters.filter(shouldDisplayCharacter)
         })
     } ,[conditions , characters])
 
@@ -31,20 +32,23 @@ function Main(props) {
     function setSeason(season){
         setConditions((current)=> ({
             ...current, 
-            season:parseInt(season)
+            season : parseInt(season)
         }))
     }
 
     function setStatus(status){
         setConditions((current)=> ({
             ...current, 
-            status:status
+            status : status
         }))
     }
 
 
+    // let list = display.map((character , index) => {
+    //     return(<Character key={index} data={character} />)
+    // })
     let list = display.map((character , index) => {
-        return(<Character key={index} data={character} />)
+        return(<Actor key={index} data={character} />)
     })
 
 
