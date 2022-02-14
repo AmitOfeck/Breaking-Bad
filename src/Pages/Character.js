@@ -27,9 +27,9 @@ function Character(props) {
         setCharacter(answer[0])
     } ,[])
 
-    let occupation = character.occupation.join(',')
-    let appearance = character.appearance.join(',')
-    let betterCallSaul = character.better_call_saul_appearance.join(',')
+    let occupation = character.occupation.join(', ')
+    let appearance = character.appearance.join(', ')
+    let betterCallSaul = character.better_call_saul_appearance.join(', ')
    
     return (
         <div id="back">
