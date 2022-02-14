@@ -8,7 +8,7 @@ function Router(props) {
         <div>
             <Routes>
             <Route path="/" exact element={<Main/>}/>
-            <Route path="/:name" exact element={<Character/>}/>
+            <Route path="/:id" exact element={<Character/>}/>
             </Routes>
         </div>
     );
