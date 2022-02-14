@@ -15,8 +15,6 @@ function Actor(props) {
               <FrontSide>
               <img src={props.data.img} id="flipCard"/>
               </FrontSide>
-              {/* <BackSide style={{ backgroundColor: '#F5F5DC'}}> */}
-              {/* <BackSide style={{backgroundImage: 'url(' + props.data.img + ')' , backgroundSize: '270px' }}> */}
               <BackSide id="backCard">
 
               <strong>{props.data.name}</strong><br/>

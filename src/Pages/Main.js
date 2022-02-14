@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Utils from '../Utils/Utils';
-import Character from './Character';
 import '../style.css';
 import Actor from './Actor';
 
@@ -43,10 +42,6 @@ function Main(props) {
         }))
     }
 
-
-    // let list = display.map((character , index) => {
-    //     return(<Character key={index} data={character} />)
-    // })
     let list = display.map((character , index) => {
         return(<Actor key={index} data={character} />)
     })
