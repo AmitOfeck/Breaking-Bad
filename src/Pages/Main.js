@@ -73,12 +73,12 @@ function Main(props) {
                 <div>
                     <br/>
                     <strong id="white">Appearance in season</strong> &nbsp;&nbsp;
-                    <div class="btn-group" role="group" aria-label="Basic outlined example">
-                      <button type="button" value='1' id={conditions.season === 1 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>1</button>
-                      <button type="button" value='2' id={conditions.season === 2 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>2</button>
-                      <button type="button" value='3' id={conditions.season === 3 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>3</button>
-                      <button type="button" value='4' id={conditions.season === 4 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>4</button>
-                      <button type="button" value='5' id={conditions.season === 5 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>5</button>
+                    <div className="btn-group" role="group" aria-label="Basic outlined example">
+                      <button type="button" value='1' id={conditions.season === 1 ? "blue" : ""} className="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>1</button>
+                      <button type="button" value='2' id={conditions.season === 2 ? "blue" : ""} className="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>2</button>
+                      <button type="button" value='3' id={conditions.season === 3 ? "blue" : ""} className="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>3</button>
+                      <button type="button" value='4' id={conditions.season === 4 ? "blue" : ""} className="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>4</button>
+                      <button type="button" value='5' id={conditions.season === 5 ? "blue" : ""} className="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>5</button>
                      </div>
                      <br/>
                 </div>
@@ -87,11 +87,11 @@ function Main(props) {
                  <div>
                      <br/>
                     <strong id="white">Status</strong> &nbsp;&nbsp;
-                    <div class="btn-group" role="group" aria-label="Basic outlined example">
-                      <button type="button" value="Presumed dead" id={conditions.status === "Presumed dead" ? "blue" : ""} class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Presumed dead</button>
-                      <button type="button" value="Alive" id={conditions.status === "Alive" ? "blue" : ""} class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Alive</button>
-                      <button type="button" value="Deceased" id={conditions.status === "Deceased" ? "blue" : ""} class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Deceased</button>
-                      <button type="button" value="Unknown" id={conditions.status === "Unknown" ? "blue" : ""} class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Unknown</button>
+                    <div className="btn-group" role="group" aria-label="Basic outlined example">
+                      <button type="button" value="Presumed dead" id={conditions.status === "Presumed dead" ? "blue" : ""} className="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Presumed dead</button>
+                      <button type="button" value="Alive" id={conditions.status === "Alive" ? "blue" : ""} className="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Alive</button>
+                      <button type="button" value="Deceased" id={conditions.status === "Deceased" ? "blue" : ""} className="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Deceased</button>
+                      <button type="button" value="Unknown" id={conditions.status === "Unknown" ? "blue" : ""} className="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Unknown</button>
                      </div>
                  </div> 
             </div>

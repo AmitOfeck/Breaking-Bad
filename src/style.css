@@ -35,3 +35,9 @@
 #blue{
   background-color:rgba(0, 0, 255, 0.507)
 }
+
+#detailsCard{
+  display: grid;
+  grid-template-columns: 15% 30% 40% 15%;
+  row-gap: 20px; 
+}

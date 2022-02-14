@@ -11,31 +11,46 @@ function Character(props) {
     const [character , setCharacter] = useState({})
 
     useEffect(async () => {
+        // console.log("hi")
         const answer = await Utils.getCharacterById(params.id)
+        // console.log(answer[0])
         setCharacter(answer[0])
     } ,[])
+
+    // let occupation = character.occupation.join(',')
+    // let appearance = character.appearance.join(',')
+    // let betterCallSaul = character.better_call_saul_appearance.join(',')
    
     return (
         <div id="back">
-            
-            <div class="row g-0" id="white">
-            <div class="col-md-4">
-            <img src={character.img} class="img-fluid rounded-start" />
-            </div>
-            <div class="col-md-8">
-            <div class="card-body">
-            <h5 class="card-title">{character.name}</h5>
+
+            <button type="button" className="btn btn-warning" onClick={() => navigate ('/')}>Back</button>
+            <br/>
+
+            <div className="row g-0" id="white" id="detailsCard">
+            <div></div>
+
+            {/* <div className="col-md-4"> */}
+            <img src={character.img} className="img-fluid rounded-start" />
+            {/* </div> */}
+
+            <div className="col-md-8" id="white">
+            <div className="card-body">
+            <h5 className="card-title">{character.name}</h5>
             <strong>Birthday : </strong> {character.birthday} <br/>
-            <strong>Occupation : </strong>{character.occupation.join(',')} <br/>
+            {/* <strong>Occupation : </strong>{occupation} <br/> */}
             <strong>Status : </strong>{character.status} <br/>
             <strong>Nickname : </strong>{character.nickname} <br/>
-            <strong>Appearance : </strong>{character.appearance.join(',')} <br/>
+            {/* <strong>Appearance : </strong>{appearance} <br/> */}
             <strong>Portrayed by : </strong>{character.portrayed} <br/>
             <strong>Category : </strong>{character.category} <br/>
-            <strong>Better call saul appearance : </strong>{character.better_call_saul_appearance.join(',')} <br/>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            {/* <strong>Better call saul appearance : </strong>{betterCallSaul} <br/> */}
+            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
             </div>
             </div>
+
+            <div id="white">v</div>
+
             </div>
             
             <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
