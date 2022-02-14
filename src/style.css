@@ -38,6 +38,6 @@
 
 #detailsCard{
   display: grid;
-  grid-template-columns: 15% 30% 40% 15%;
+  grid-template-columns: 15% 30% 45% 10%;
   row-gap: 20px; 
 }
