@@ -28,6 +28,8 @@ function Main(props) {
         return displayBySeason && displayByStatus
     }
 
+    
+
     function setSeason(season){
         setConditions((current)=> ({
             ...current, 
@@ -64,11 +66,11 @@ function Main(props) {
                     <br/>
                     <strong id="white">Appearance in season</strong> &nbsp;&nbsp;
                     <div class="btn-group" role="group" aria-label="Basic outlined example">
-                      <button type="button" value='1' class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>1</button>
-                      <button type="button" value='2' class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>2</button>
-                      <button type="button" value='3' class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>3</button>
-                      <button type="button" value='4' class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>4</button>
-                      <button type="button" value='5' class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>5</button>
+                      <button type="button" value='1' id={conditions.season === 1 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>1</button>
+                      <button type="button" value='2' id={conditions.season === 2 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>2</button>
+                      <button type="button" value='3' id={conditions.season === 3 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>3</button>
+                      <button type="button" value='4' id={conditions.season === 4 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>4</button>
+                      <button type="button" value='5' id={conditions.season === 5 ? "blue" : ""} class="btn btn-dark" onClick={(e) => setSeason(e.target.value)}>5</button>
                      </div>
                      <br/>
                 </div>
@@ -78,10 +80,10 @@ function Main(props) {
                      <br/>
                     <strong id="white">Status</strong> &nbsp;&nbsp;
                     <div class="btn-group" role="group" aria-label="Basic outlined example">
-                      <button type="button" value="Presumed dead" class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Presumed dead</button>
-                      <button type="button" value="Alive" class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Alive</button>
-                      <button type="button" value="Deceased" class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Deceased</button>
-                      <button type="button" value="Unknown" class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Unknown</button>
+                      <button type="button" value="Presumed dead" id={conditions.status === "Presumed dead" ? "blue" : ""} class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Presumed dead</button>
+                      <button type="button" value="Alive" id={conditions.status === "Alive" ? "blue" : ""} class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Alive</button>
+                      <button type="button" value="Deceased" id={conditions.status === "Deceased" ? "blue" : ""} class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Deceased</button>
+                      <button type="button" value="Unknown" id={conditions.status === "Unknown" ? "blue" : ""} class="btn btn-dark" onClick={(e) => setStatus(e.target.value)}>Unknown</button>
                      </div>
                  </div> 
             </div>
