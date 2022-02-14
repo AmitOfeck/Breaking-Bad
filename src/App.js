@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import Main from './Pages/Main';
+import Router from './Routes/Router';
 
 function App() {
   return (
     <div className="App">
-       <Main/>
+       <Router/>
     </div>
   );
 }
