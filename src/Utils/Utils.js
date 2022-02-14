@@ -6,8 +6,8 @@ const listCharacters = async () => {
 }
 
 const getCharacterById = async (id) => {
-    const resp = await axios.get("https://breakingbadapi.com/api/characters/"+id)
+    const resp = await axios.get("https://breakingbadapi.com/api/characters/" + id)
     return resp.data
 }
 
-export default {listCharacters , getCharacterById}
+export default { listCharacters, getCharacterById }
