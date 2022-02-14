@@ -26,10 +26,6 @@ function Character(props) {
         const answer = await Utils.getCharacterById(params.id)
         setCharacter(answer[0])
     } ,[])
-
-    let occupation = character.occupation.join(', ')
-    let appearance = character.appearance.join(', ')
-    let betterCallSaul = character.better_call_saul_appearance.join(', ')
    
     return (
         <div id="back">
@@ -46,13 +42,13 @@ function Character(props) {
             <h3 className="card-title">{character.name}</h3>
             <p>-------------------------------</p>
             <strong>Birthday : </strong> {character.birthday} <br/>
-            <strong>Occupation : </strong>{occupation} <br/>
+            <strong>Occupation : </strong>{character.occupation.join(', ')} <br/>
             <strong>Status : </strong>{character.status} <br/>
             <strong>Nickname : </strong>{character.nickname} <br/>
-            <strong>Appearance : </strong>{appearance} <br/>
+            <strong>Appearance : </strong>{character.appearance.join(', ')} <br/>
             <strong>Portrayed by : </strong>{character.portrayed} <br/>
             <strong>Category : </strong>{character.category} <br/>
-            <strong>Better call saul appearance : </strong>{betterCallSaul} <br/><br/><br/>
+            <strong>Better call saul appearance : </strong>{character.better_call_saul_appearance.join(', ')} <br/><br/><br/>
             <button type="button" className="btn btn-warning" onClick={() => navigate ('/')}>Back</button>
             </div>
             </div>
