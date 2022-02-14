@@ -24,7 +24,6 @@ function Character(props) {
     return (
         <div id="back">
 
-            <button type="button" className="btn btn-warning" onClick={() => navigate ('/')}>Back</button>
             <br/>
 
             <div className="row g-0" id="white" id="detailsCard">
@@ -36,7 +35,8 @@ function Character(props) {
 
             <div className="col-md-8" id="white">
             <div className="card-body">
-            <h5 className="card-title">{character.name}</h5>
+            <h3 className="card-title">{character.name}</h3>
+            <p>-------------------------------</p>
             <strong>Birthday : </strong> {character.birthday} <br/>
             {/* <strong>Occupation : </strong>{occupation} <br/> */}
             <strong>Status : </strong>{character.status} <br/>
@@ -44,12 +44,12 @@ function Character(props) {
             {/* <strong>Appearance : </strong>{appearance} <br/> */}
             <strong>Portrayed by : </strong>{character.portrayed} <br/>
             <strong>Category : </strong>{character.category} <br/>
-            {/* <strong>Better call saul appearance : </strong>{betterCallSaul} <br/> */}
-            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+            {/* <strong>Better call saul appearance : </strong>{betterCallSaul} <br/> */}<br/><br/>
+            <button type="button" className="btn btn-warning" onClick={() => navigate ('/')}>Back</button>
             </div>
             </div>
 
-            <div id="white">v</div>
+            <div></div>
 
             </div>
             
